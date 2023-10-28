@@ -18,13 +18,7 @@ body {
       transform: scale(1); 
       overflow: hidden;
 }
-.video-container video {
-      
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      z-index: -1;
-}
+
 .video-text {
       position: absolute;
       top: 50%;

@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+  <title>居中布局示例</title>
+  <style>
+    *{
+        margin:0;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+    }
+    .video-container {
+      
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: flex;
+      transform: scale(1); 
+      overflow: hidden;
+    }
+    .video-container video {
+      
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      
+    }
+    .video-text p{
+      font-size:160px;
+      color:#fff;
+      font-weight: 600;
+    }
+    .video-text p:hover{
+      -webkit-text-stroke:2px #fff;
+      color: transparent;
+    }
+    .video-text a {
+      text-decoration: none;
+      display:inline-block;
+      border: 2px solid #fff;
+      padding: 14px 35px;
+      border-radius:50px;
+      margin-top:20px; 
+      font-size:20px;
+      color:#fff;
+      font-weight: 600;
+    }
+    .video-text a:hover {
+      -webkit-text-stroke:2px #fff;
+      color: transparent;
+    }
+  </style>
 </head>
 <body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
+  <div class="video-container">
+    <video autoplay loop muted >
+      <source src="src/SummerNights.mp4" type="video/mp4">
+    </video>
+    <div class="video-text">
+      <p>Welcome</p>
+      <a href="index1.html">Take a tour</a>
+    </div>
+  </div>
 </body>
 </html>
+
+
+

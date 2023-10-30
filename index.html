@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="mystyle.css"/>
   <script type="text/javascript" src="text1.js"></script>
   <title>Welcome Page</title>
@@ -12,6 +12,56 @@
         padding: 0;
         box-sizing: border-box;
     }
+    @media (max-width:1200px) {
+      .video-container{
+         min-height: 112vh;
+      }.video-container video{
+        min-height: 112vh;
+      }
+      
+    }
+    @media (max-height:800px) {
+      .video-container{
+         min-width: 68vh;
+      }.video-container video{
+        min-width: 68vh;
+      }
+      
+    }
+
+    @media (max-height: 630px) {
+      .video-text span{
+         font-size: 55% ;
+         font-weight: 700;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .video-text span{
+         
+        visibility: hidden;
+         
+      }
+      .video-text a {
+        
+        animation: fadein-phone 6s 1s ease forwards !important;
+        
+        
+      }
+      @keyframes fadein-phone {
+        0% {
+          opacity: 0;
+          visibility: hidden;
+        }
+        
+        100% {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    
+    
     body {
       font-family: "Signika Negative", sans-serif;
       display: flex;
@@ -23,7 +73,7 @@
       
       position: relative;
       width: 100%;
-      height: auto;
+      height: 100%;
       display: flex;
       transform: scale(1); 
       overflow: hidden;
@@ -31,26 +81,31 @@
     .video-container video {
       
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
       z-index: -1;
     }
+    
     .video-text {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      
+      font-size: 120px;
+      font-weight: 700;
+      letter-spacing: -2.5px;
     }
     .video-text span{
+      text-align: center;
       cursor: pointer;
       display: inline-block;
+      
     }
+    
     .video-text span:nth-child(1){
       font-family: "Signika Negative", sans-serif;
-      font-size:160px;
-      font-weight: 600;
+      
       
       animation-name: backcolor,balance,anim-flipX,forwardcolor;
       transform-origin: bottom left;
@@ -67,8 +122,7 @@
 
     .video-text span:nth-child(2){
       font-family: "Signika Negative", sans-serif;
-      font-size:160px;
-      font-weight: 600;
+      
       
       animation-name: backcolor, rotate,anim-flipX,forwardcolor;
       
@@ -85,8 +139,7 @@
     
     .video-text span:nth-child(3){
       font-family: "Signika Negative", sans-serif;
-      font-size:160px;
-      font-weight: 600;
+      
       
       animation-name: backcolor,rising,anim-flipX,forwardcolor;
       transform-origin: top center;
@@ -103,8 +156,7 @@
 
     .video-text span:nth-child(4){
       font-family: "Signika Negative", sans-serif;
-      font-size:160px;
-      font-weight: 600;
+      
       
       animation-name: backcolor,anim-flipX,anim-flipX,forwardcolor;
       animation-duration: 1.5s, 1.5s,1s, 8s;
@@ -120,8 +172,7 @@
 
     .video-text span:nth-child(5){
       font-family: "Signika Negative", sans-serif;
-      font-size:160px;
-      font-weight: 600;
+     
       
       animation-name: backcolor,falling,anim-flipX,forwardcolor;
       transform-origin: bottom center;
@@ -137,8 +188,7 @@
     }
     .video-text span:nth-child(6){
       font-family: "Signika Negative", sans-serif;
-      font-size:160px;
-      font-weight: 600;
+      
       
       animation-name: backcolor,rotate-X,anim-flipX,forwardcolor;
       transform-origin: bottom right;
@@ -155,8 +205,7 @@
 
     .video-text span:nth-child(7){
       font-family: "Signika Negative", sans-serif;
-      font-size:160px;
-      font-weight: 600;
+      
       
       
       animation-name: backcolor,anti-balance,anim-flipX,forwardcolor;
@@ -174,8 +223,7 @@
 
     .video-text span:nth-child(8){
       font-family: "Signika Negative", sans-serif;
-      font-size:160px;
-      font-weight: 600;
+      
       
       animation-name: backcolor,forwardcolor-X;
       animation-duration: 1.5s, 4.5s;
@@ -386,6 +434,7 @@
 
     
     .video-text a {
+      letter-spacing: 0px;
       opacity: 0;
       visibility: hidden;
       text-decoration: none;
@@ -421,7 +470,7 @@
 </head>
 <body>
   <div class="video-container">
-    <video id="myVideo" autoplay loop muted >
+    <video id="myVideo" autoplay loop muted plays-inline >
       <source src="https://assets-global.website-files.com/653dcbdd718cbd5c51c4dbed/653dd65011e1dd3cc2826932_Summer Nights-transcode.mp4" type="video/mp4">
       <source src="https://assets-global.website-files.com/653dcbdd718cbd5c51c4dbed/653dd65011e1dd3cc2826932_Summer Nights-transcode.webm" type="video/webm">
     </video>
@@ -433,9 +482,9 @@
       <span> o</span>
       <span> m</span>
       <span> e</span>
-      <span>&nbsp; :)</span>
+      <span> :)</span>
       
-      <a href="https://paddyzz.github.io">Take a tour</a>
+      <a href="https://paddyzz.github.io/index1.html">Take a tour</a>
       
     </div>
     

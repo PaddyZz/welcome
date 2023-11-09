@@ -249,45 +249,62 @@
       
       animation-name: backcolor,forwardcolor-X;
       animation-duration: 1.5s, 9s;
-      animation-delay: 0s,  21.5s;
+      animation-delay: 0s,  21.5s; /*21.5*/
       animation-fill-mode: forwards, forwards; 
-      animation-play-state: paused, running;
+      animation-play-state: paused, running; /*paused*/
 
       background-repeat: no-repeat;
       -webkit-background-clip: text;
       background-clip: text;
       background-position: -700px 0;    
+      
     }
-    
 
     @keyframes forwardcolor-X {
       0%{
-        
         background-position: 0 0;
-        color: #fff;;
+        color: #fff;
+        background-image: linear-gradient(transparent,transparent);
+      }
+      10%{
+        
+        
+        color: #fff;
         background-image: linear-gradient(transparent,transparent);
         
       }
       
-      30%{
-        color: #060606;
-        background-image: linear-gradient(transparent,transparent);
-      }
-      35%{
-        /*color: #f208a8; */
-        
-        background-image: linear-gradient(transparent,transparent);
-      }
       40%{
-        color: #ff0bb6;
+        color: #060606;
         background-image: linear-gradient(transparent,transparent);
       }
       45%{
-        color: #060606;
-        background-image: linear-gradient(transparent,transparent);
+        color:transparent;
+        background-image: linear-gradient( #e2c9cc , #e7627d , #b8235a , #801357 , #3d1635, #1c1a27 );
       }
       50%{
-        color: #fff;
+        color:transparent;
+        
+        background-image: linear-gradient(#e80992,rgb(97, 9, 231),rgb(246, 87, 211));
+      }
+      
+      55%{
+        color:transparent;
+        background-image: linear-gradient(#ee5cc5, #75a0ea);
+      }
+      60%{
+        color:transparent;
+        background-image: linear-gradient(#fbc2eb, #079b7d, #ee5cc5,#28a2b7, #a6c1ee);
+        
+      }
+      65%{
+        color:transparent;
+        background-image: linear-gradient(#d558c8,#4fb576, #28a9ae ,#e80992, #28a2b7 , #4c7788 , #6c4f63 ,#24d292, #432c39);
+      }
+      70%{
+        background-position: 0 0;
+        
+        color:rgb(201, 198, 198);
         background-image: linear-gradient(transparent,transparent);
       }
       
@@ -301,7 +318,6 @@
         visibility: hidden;
       }
     }
-
     @keyframes balance {
       0%, 100% {
         transform: rotate(0deg);
@@ -492,7 +508,7 @@
       <span> m</span>
       <span> e</span>
       <span style="display:inline; animation: none; visibility: hidden; opacity: 0;">&nbsp; </span>
-      <span background: linear-gradient(90deg, #ff0bb6, #06b4e2);background-clip: text;> :)</span>
+      <span > :)</span>
       
       <a  href ="https://paddyzz.github.io" class="btn btn-1">
         <svg>

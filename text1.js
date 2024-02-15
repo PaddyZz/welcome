@@ -1,16 +1,35 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  
+  var btn = document.querySelector('.btn');
+  var svgLine = document.querySelector(".svg_line");
+  // 添加点击事件监听器
+  btn.addEventListener('click', function() {
+      // 点击后将display属性设置为"none"
+      btn.style.animation="none";
+      btn.style.animationName = "fadeBtn";
+      btn.style.animationDuration = "2s";
+      btn.style.animationTimingFunction = "ease-in-out";
+      btn.style.animationFillMode = "forwards";
+      svgLine.style.display="none";
+  });
   
   var waitingAnimations = document.querySelectorAll(".video-text span");
 
   for (var i = 0; i < waitingAnimations.length; i++) {
+    if (i ==0) {
+      (function(index) {
+      
+        setTimeout(function() {
+          waitingAnimations[index].style.animationPlayState = "running";
+        }, (index+1) * 1); /*3800*/
+      })(i);
+    } else {
     (function(index) {
       
       setTimeout(function() {
         waitingAnimations[index].style.animationPlayState = "running";
       }, (index+1) * 600);
     })(i);
-  }
+  }}
 });
 
 /*document.addEventListener('DOMContentLoaded', function() {
@@ -65,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 document.addEventListener('DOMContentLoaded', function() {
   var firstButton = document.querySelector('.btn-1');
   var rects = document.querySelectorAll('.btn-1 rect');
+  var fireworks = document.querySelector('.fireworkDiv');
   // 当fadein动画结束后添加类
   firstButton.addEventListener('mouseleave', function() {
     
@@ -72,6 +92,12 @@ document.addEventListener('DOMContentLoaded', function() {
       rects[0].setAttribute('ry', '15');
       rects[1].setAttribute('rx', '15');
       rects[1].setAttribute('ry', '15');
+
+      var firework = document.querySelector('.firework');
+      if (firework) {
+        firework.remove();
+      }
+      
   });
   firstButton.addEventListener('mouseenter', function() {
     
@@ -79,6 +105,12 @@ document.addEventListener('DOMContentLoaded', function() {
       rects[0].setAttribute('ry', '0');
       rects[1].setAttribute('rx', '0');
       rects[1].setAttribute('ry', '0');
+
+      var firework = document.createElement('div');
+      firework.classList.add('firework');
+      fireworks.appendChild(firework);
+      
+      
   });
   
 });

@@ -2,7 +2,7 @@
   font-family: 'Signika Negative';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
   src: url(https://cdn.jsdelivr.net/gh/PaddyZz/threeJS@latest/font/signika.woff2) format('woff2');
 }
 

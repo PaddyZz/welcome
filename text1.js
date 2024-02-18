@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 document.addEventListener('DOMContentLoaded', function() {
   var firstButton = document.querySelector('.btn-1');
   var rects = document.querySelectorAll('.btn-1 rect');
-  var svgLine = document.querySelector('.svg_line');
+  var svgLine = document.querySelector('.svgLine');
   var fireworks = document.querySelector('.fireworkDiv');
   // 当fadein动画结束后添加类
   firstButton.addEventListener('mouseleave', function() {

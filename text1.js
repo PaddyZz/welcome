@@ -1,17 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  var btn = document.querySelector('.btn');
-  var svgLine = document.querySelector(".svg_line");
-  // 添加点击事件监听器
-  btn.addEventListener('click', function() {
-      // 点击后将display属性设置为"none"
-      btn.style.animation="none";
-      btn.style.animationName = "fadeBtn";
-      btn.style.animationDuration = "2s";
-      btn.style.animationTimingFunction = "ease-in-out";
-      btn.style.animationFillMode = "forwards";
-      svgLine.style.display="none";
-  });
-  
+ 
   var waitingAnimations = document.querySelectorAll(".video-text span");
 
   for (var i = 0; i < waitingAnimations.length; i++) {

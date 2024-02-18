@@ -11,7 +11,7 @@
   opacity: 0;
   visibility: hidden;
   display: inline-block;
-  animation: fadein 7s 0.5s ease forwards;   /*28.5*/
+  animation: fadein 7s 28.5s ease forwards;   /*28.5*/
   animation-fill-mode: forwards ;
   color: #fff;
   cursor: pointer;

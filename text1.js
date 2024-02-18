@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 document.addEventListener('DOMContentLoaded', function() {
   var firstButton = document.querySelector('.btn-1');
   var rects = document.querySelectorAll('.btn-1 rect');
+  var svgLine = document.querySelector('.svg_line');
   var fireworks = document.querySelector('.fireworkDiv');
   // 当fadein动画结束后添加类
   firstButton.addEventListener('mouseleave', function() {
@@ -80,7 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
       rects[0].setAttribute('ry', '15');
       rects[1].setAttribute('rx', '15');
       rects[1].setAttribute('ry', '15');
-
+      svgLine.style.scale = "1.1";
+   
       var firework = document.querySelector('.firework');
       if (firework) {
         firework.remove();
@@ -93,7 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
       rects[0].setAttribute('ry', '0');
       rects[1].setAttribute('rx', '0');
       rects[1].setAttribute('ry', '0');
-
+      svgLine.style.scale = "1.0";
+   
       var firework = document.createElement('div');
       firework.classList.add('firework');
       fireworks.appendChild(firework);

@@ -99,10 +99,13 @@ document.addEventListener('DOMContentLoaded', function() {
    
       var firework = document.createElement('div');
       firework.classList.add('firework');
-      fireworks.appendChild(firework);
-      
-      
+      fireworks.appendChild(firework);  
   });
+  firstButton.addEventListener('click', function() {
+     
+     svgLine.style.opacity = "0";
+ 
+   });
   
 });
 

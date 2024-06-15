@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
- 
+
+ if (window !== window.top) {
+
+      window.top.location.href='https://www.please_do_not_iframe_my_web.com';
+  }
   var waitingAnimations = document.querySelectorAll(".video-text span");
 
   for (var i = 0; i < waitingAnimations.length; i++) {
